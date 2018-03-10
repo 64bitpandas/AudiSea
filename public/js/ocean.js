@@ -4,6 +4,8 @@
  * Based on a Codrops tutorial:
  * http://tympanus.net/codrops/2016/04/26/the-aviator-animating-basic-3d-scene-threejs/
  */
+/*Made by Don McCurdy*/
+/*https://github.com/donmccurdy/aframe-extras*/
 AFRAME.registerPrimitive('a-ocean', {
   defaultComponents: {
     ocean: {},
