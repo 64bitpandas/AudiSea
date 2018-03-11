@@ -1,9 +1,13 @@
 import React, { Component } from "react"
 import mp3 from './wingless.mp3';
-import ReactAudioPlayer from 'react-audio-player';
 
 class Index extends Component {
-    
+
+    constructor() {
+        super();
+        this.state = {amplitude: 0.4};
+    }
+
     render() {
         return(
             <div className="Index">
@@ -23,7 +27,16 @@ class Index extends Component {
 
                     <a-gradient-sky material="shader: gradient; topColor: 191 96 255; bottomColor: 66 134 244;"></a-gradient-sky>
 
-                    <a-ocean width="100" depth="100" density={this.state.density} color="#4286f4" audioanalyser="src: #song" audioanalyser-volume-scale="multiplier: 100"></a-ocean>
+                    <a-ocean 
+                        width="100" 
+                        depth="100" 
+                        density="90"
+                        amplitude="0.1"
+                        multiplier="0.5"
+                        color="#4286f4" 
+                        audioanalyser="src: #song" 
+                        audioanalyser-volume-scale="multiplier: 100">
+                    </a-ocean>
 
                     <a-camera wasd-controls-enabled="false" position="0 0 0">
                         <a-cursor color="#05ffa1"></a-cursor>

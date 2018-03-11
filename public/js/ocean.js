@@ -20,7 +20,7 @@ AFRAME.registerPrimitive('a-ocean', {
     speed: 'ocean.speed',
     speedVariance: 'ocean.speedVariance',
     color: 'ocean.color',
-    opacity: 'ocean.opacity'
+    opacity: 'ocean.opacity',
   }
 });
 
@@ -43,7 +43,10 @@ AFRAME.registerComponent('ocean', {
 
     // Material.
     color: {default: '#7AD2F7', type: 'color'},
-    opacity: {default: 0.8}
+    opacity: {default: 0.8},
+
+    //Audio stuff
+    multiplier: {default: 0.05}
   },
 
   /**
@@ -89,10 +92,21 @@ AFRAME.registerComponent('ocean', {
   tick: function (t, dt) {
     if (!dt) return;
 
+    var analyserEl = this.data.analyserEl || this.el;
+    var analyserComponent;
+    var el = this.el;
+    var volume;
+
+    analyserComponent = analyserEl.components.audioanalyser;
+    if (!analyserComponent.analyser) { return; }
+
+    volume = analyserComponent.volume * this.data.multiplier;
+    el.setAttribute('density', volume);
+
     const verts = this.mesh.geometry.vertices;
     for (let v, vprops, i = 0; (v = verts[i]); i++){
       vprops = this.waves[i];
-      v.z = vprops.z + Math.sin(vprops.ang) * vprops.amp;
+      v.z = vprops.z + Math.sin(vprops.ang) * vprops.amp * volume;
       vprops.ang += vprops.speed * dt;
     }
     this.mesh.geometry.verticesNeedUpdate = true;

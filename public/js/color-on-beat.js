@@ -8,7 +8,7 @@ AFRAME.registerComponent('color-on-beat', {
     var el = this.el;
 
     analyserEl.addEventListener('audioanalyser-beat', function () {
-      el.setAttribute('material', 'color', '#' + new THREE.Color(
+      el.setAttribute('color', '#' + new THREE.Color(
         Math.random(), Math.random(), Math.random()
       ).getHexString());
     });
