@@ -1,19 +1,29 @@
 import React, { Component } from "react"
 import mp3 from './wingless.mp3';
+import ReactAudioPlayer from 'react-audio-player';
 
 class Index extends Component {
-
+    
     render() {
         return(
             <div className="Index">
                 <a-scene>
                     <a-assets>
-                        <audio id="song" src={mp3} loop autostart="1"></audio>
+                        <audio id="song" src={mp3} autoPlay loop />
                     </a-assets>
+
+                    <a-sphere id="mouth"
+                        color="#000"
+                        audioanalyser="src: #song"
+                        audioanalyser-volume-scale="multiplier: .008"
+                        position="0 1 -4"
+                        side="double"
+                        shader="flat"
+                    ></a-sphere>
 
                     <a-gradient-sky material="shader: gradient; topColor: 191 96 255; bottomColor: 66 134 244;"></a-gradient-sky>
 
-                    <a-ocean width="100" depth="100" density="90" color="#4286f4"></a-ocean>
+                    <a-ocean width="100" depth="100" density={this.state.density} color="#4286f4" audioanalyser="src: #song" audioanalyser-volume-scale="multiplier: 100"></a-ocean>
 
                     <a-camera wasd-controls-enabled="false" position="0 0 0">
                         <a-cursor color="#05ffa1"></a-cursor>

@@ -14,10 +14,6 @@ AFRAME.registerComponent('audioanalyser-volume-scale', {
         if (!analyserComponent.analyser) { return; }
 
         volume = analyserComponent.volume * this.data.multiplier;
-        el.setAttribute('scale', {
-            x: volume,
-            y: volume,
-            z: volume
-        });
+        el.setAttribute('density', volume);
     }
 });
