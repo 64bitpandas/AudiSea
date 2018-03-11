@@ -11,6 +11,7 @@
     <script src="./js/aframe.min.js"></script>
     <script src="./js/gradientsky.min.js"></script>
     <script src="./js/ocean.js"></script>
+    <script src="./js/sky.js"></script>
     <script src="./js/aframe-audioanalyser-components.min.js"></script>
 
     <script src="js/annyang.min.js"></script>
@@ -42,13 +43,14 @@
         <a-scene antialias="true" embedded>
             <div class="a-enter-vr"></div>
             <a-assets>
-                <!--<audio id="song" src="./wingless.mp3" autoPlay loop />-->
+                <audio id="song" src="./wingless.mp3" autoPlay loop />
+                <a-asset-item id="cloud" src="./OBJ Models/Cloud_1.obj"></a-asset-item>
+                <a-asset-item id="cloud-mtl" src="./OBJ Models/Cloud_1.mtl"></a-asset-item>
             </a-assets>
 
             <a-sphere id="mouth"
                 color="#000"
-                audioanalyser
-                spotify
+                audioanalyser="src: #song"
                 audioanalyser-volume-scale="multiplier: .008"
                 position="0 1 -4"
                 side="double"
@@ -58,16 +60,17 @@
             <a-entity id="text" text="value: Say out loud 'play <artist name or song>'; color: #FFF; width: 3" position="0.3 3 -3" remove-on-event="el: #analyser; event: spotify-play">
             </a-entity>
 
-            <a-gradient-sky material="shader: gradient; topColor: 191 96 255; bottomColor: 66 0 50;"></a-gradient-sky>
+            <a-entity obj-model="obj: #cloud; mtl: #cloud-mtl" position="0 10 -3"></a-entity>
 
-          <a-ocean 
+            <a-gradient-sky id="sky" sky-color="analyserEl: #ocean; el: #sky" material="shader: gradient; topColor: 191 96 255; bottomColor: 66 0 50;"></a-gradient-sky>
+
+          <a-ocean id="ocean"
               width="100" 
               depth="100" 
               density="50"
               amplitude="0.1"
               multiplier="0.5"
               color="#4286f4" 
-              skyEl="#"
               audioanalyser="src: #song"
               audioanalyser-volume-scale="multiplier: 100">
           </a-ocean>

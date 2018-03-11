@@ -6,8 +6,6 @@
  */
 /*Made by Don McCurdy*/
 /*https://github.com/donmccurdy/aframe-extras*/
-var rollingAvg = new Array(100).fill(0);
-
 AFRAME.registerPrimitive('a-ocean', {
   defaultComponents: {
     ocean: {},
@@ -51,7 +49,7 @@ AFRAME.registerComponent('ocean', {
     multiplier: {default: 0.05},
 
     //Sky
-    skyEl: {}
+    sky: {}
   },
 
   /**
@@ -104,25 +102,18 @@ AFRAME.registerComponent('ocean', {
     var volume;
 
     //sky
-    var skyEl = this.data.skyEl;
+    var skyEl = this.data.sky;
 
     analyserComponent = analyserEl.components.audioanalyser;
     if (!analyserComponent.analyser) { return; }
 
     volume = analyserComponent.volume * this.data.multiplier;
 
-    rollingAvg.splice(0,0,volume);
-    rollingAvg.pop();
-
-    var avg = rollingAvg.reduce(function (a, b) { return a + b; }) / rollingAvg.length;
-    skyEl.material.bottomColor = avg + ' ' + avg + ' ' + avg;
-    el.setAttribute('density', volume);
-
     const verts = this.mesh.geometry.vertices;
     for (let v, vprops, i = 0; (v = verts[i]); i++){
       vprops = this.waves[i];
 
-       v.z = vprops.z + Math.sin(vprops.ang) * vprops.amp * vol;
+       v.z = vprops.z + Math.sin(vprops.ang) * vprops.amp * volume;
 
       vprops.ang += vprops.speed * dt;
     }
