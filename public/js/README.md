@@ -1,1 +1,0 @@
-You may notice this external directory of JS files, that aren't in `src`. Becuase of the prototype html element feature that A-Frame relies on is wonky, all A-Frame related stuff needs to go here. All other dependencies should be normally installed.
