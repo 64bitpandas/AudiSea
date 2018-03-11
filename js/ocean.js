@@ -60,7 +60,7 @@ AFRAME.registerPrimitive('a-ocean', {
       const el = this.el,
           data = this.data;
       let material = el.components.material;
-      
+      var sceneV = document.getElementById('scene');
      
 
       //Dolphin
@@ -72,20 +72,20 @@ AFRAME.registerPrimitive('a-ocean', {
         if (Math.floor(Math.random() * (2 - 0)) + 0 == 0)
          alongpath.value = "curve: #track1; dur:4000; rotate:true;";
         if (Math.floor(Math.random() * (2 - 0)) + 0 == 1)
-          alongpath.value = "curve: #track2; dur:4000; rotate:true;";
+          alongpath.value = "curve: #track2; dur:5000; rotate:true;";
         if (Math.floor(Math.random() * (2 - 0)) + 0 == 2)
-          alongpath.value = "curve: #track3; dur:4000; rotate:true;";
+          alongpath.value = "curve: #track3; dur:3500; rotate:true;";
         var scale = document.createAttribute("scale");
         scale.value = "1.5 1.5 1.5";
         dolphin.setAttributeNode(obj);
         dolphin.setAttributeNode(alongpath);
         dolphin.setAttributeNode(scale);
-        document.getElementById('scene').appendChild(dolphin);
+        sceneV.appendChild(dolphin);
 
         //used for removing dolphin after used
         setTimeout(function() {
-          document.getElementById('scene').removeChild(dolphin)
-        }, 4000)
+          sceneV.removeChild(dolphin)
+        }, 4500)
       });
 
       const geometry = new THREE.PlaneGeometry(data.width, data.depth, data.density, data.density);

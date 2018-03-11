@@ -74,6 +74,12 @@
             <div class="col s3 center-align">
             </div>
           </div>
+          <div class="row">
+            <div class="col s12 center-align">
+              <h5 class="center-align">Hint: Say 'play song name' to use voice control!</h5>
+              <p class="center-align">Powered By Spotify API</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -143,7 +149,7 @@
       <a-sky id="sky" sky="analyserEl: #ocean; el: #sky" color="#f441b2"></a-sky>
 
       <a-ocean id="ocean" width="100" depth="100" density="50" amplitude="0.1" multiplier="0.5" color="#4286f4" audioanalyser="src: #song"
-        audioanalyser-volume-scale="multiplier: 100">
+        audioanalyser-volume-scale="multiplier: 100" spotify>
       </a-ocean>
 
       <a-camera wasd-controls-enabled="false" user-height="4" id="camera" universal-controls="movementEnabled: false">
@@ -183,10 +189,12 @@
   </div>
   <script src="./js/audio-volume-scale.js"></script>
   <script src="./js/color-on-beat.js"></script>
-  <!-- <script src="./js/annyang.min.js"></script> -->
+  <script src="./js/annyang.min.js"></script>
   <script src="./js/song-select.js"></script>
-  <!-- <script src="./js/voice-select.js"></script> -->
+  <script src="./js/voice-select.js"></script>
   <script src="./js/sky.js"></script>
+  <script src="./js/spotify-web-api.js"></script>
+  <script src="./js/spotify.js"></script>
 </footer>
 
 </html>
