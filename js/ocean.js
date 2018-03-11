@@ -100,9 +100,10 @@ AFRAME.registerComponent('ocean', {
     var analyserComponent;
     var el = this.el;
     var volume;
-
+    var boatA = document.getElementById("boatAAnimation");
     //sky
     var skyEl = this.data.sky;
+    var tickerC = 0;
 
     analyserComponent = analyserEl.components.audioanalyser;
     if (!analyserComponent.analyser) { return; }
@@ -118,5 +119,23 @@ AFRAME.registerComponent('ocean', {
       vprops.ang += vprops.speed * dt;
     }
     this.mesh.geometry.verticesNeedUpdate = true;
+    console.log(dt);
+    if(t % 1000 <= 10) {
+      boatA.setAttribute("to", "-2 " + (volume/5).toString() + " -3");
+    }
+  },
+
+  getVolume: function () {
+    var analyserEl = this.data.analyserEl || this.el;
+    var analyserComponent;
+    var el = this.el;
+    var volume;
+
+    analyserComponent = analyserEl.components.audioanalyser;
+    if (!analyserComponent.analyser) { return; }
+
+    volume = analyserComponent.volume * this.data.multiplier;
+
+    return volume;
   }
 });
