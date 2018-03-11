@@ -118,8 +118,6 @@ AFRAME.registerComponent('ocean', {
       vprops.ang += vprops.speed * dt;
     }
     this.mesh.geometry.verticesNeedUpdate = true;
-    
-    
 
   },
 

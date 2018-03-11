@@ -1,5 +1,9 @@
 * {
-    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'Dosis', sans-serif !important;
+}
+
+body {
+    background-color: #4286f4;
 }
 
 a-scene {
