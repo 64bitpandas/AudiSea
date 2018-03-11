@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import mp3 from './wingless.mp3';
+import mp3 from './On My Own.mp3';
 
 class Index extends Component {
     render() {
@@ -13,7 +13,8 @@ class Index extends Component {
                     <a-sphere id="mouth"
                         color="#000"
                         audioanalyser="src: #song"
-                        audioanalyser-volume-scale="multiplier: .008"
+                        color-on-beat
+                        audioanalyser-volume-scale="multiplier: 0.01"
                         position="0 1 -4"
                         side="double"
                         shader="flat"
@@ -26,10 +27,10 @@ class Index extends Component {
                         depth="100" 
                         density="90"
                         amplitude="0.1"
-                        multiplier="0.5"
+                        multiplier="2"
                         color="#4286f4" 
                         audioanalyser="src: #song" 
-                        audioanalyser-volume-scale="multiplier: 100">
+                        >
                     </a-ocean>
 
                     <a-camera wasd-controls-enabled="false" position="0 0 0">
