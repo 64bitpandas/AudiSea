@@ -1,0 +1,17 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": "https://github.com/dbqeo/AudiSea.git",
+  "author": "alexwaitz <alexanderjwaitz@gmail.com>",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2",
+    "youtube-dl": "^1.12.2"
+  },
+  "private": true
+}

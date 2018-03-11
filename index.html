@@ -34,49 +34,50 @@
       You need to enable JavaScript to run this app.
     </noscript>
 
-      <!-- START CODE -->
-      <div class="c">
-        <div>
-          <h1>Welcome to AudiSea</h1>
-        </div>
-        <a-scene antialias="true" embedded>
-            <div class="a-enter-vr"></div>
-            <a-assets>
-                <!--<audio id="song" src="./wingless.mp3" autoPlay loop />-->
-            </a-assets>
-
-            <a-sphere id="mouth"
-                color="#000"
-                audioanalyser
-                spotify
-                audioanalyser-volume-scale="multiplier: .008"
-                position="0 1 -4"
-                side="double"
-                shader="flat"
-            ></a-sphere>
-            
-            <a-entity id="text" text="value: Say out loud 'play <artist name or song>'; color: #FFF; width: 3" position="0.3 3 -3" remove-on-event="el: #analyser; event: spotify-play">
-            </a-entity>
-
-            <a-gradient-sky material="shader: gradient; topColor: 191 96 255; bottomColor: 66 0 50;"></a-gradient-sky>
-
-            <a-ocean 
-                width="100" 
-                depth="100" 
-                density="50"
-                amplitude="0.1"
-                multiplier="0.5"
-                color="#4286f4" 
-                audioanalyser
-                spotify
-                audioanalyser-volume-scale="multiplier: 100">
-            </a-ocean>
-
-            <a-camera wasd-controls-enabled="false">
-              </a-camera>
-        </a-scene>
+    <!-- START CODE -->
+    <div class="c">
+      <div>
+        <h1>Welcome to AudiSea</h1>
       </div>
-      <!-- END CODE -->
+      <a-scene antialias="true" embedded>
+          <div class="a-enter-vr"></div>
+          <a-assets id="asset-element">
+              <!--<video id="video" autoplay loop="true" src="penguin-sledding.mp4"></video>-->
+              <!--<audio id="song" src="./wingless.mp3" autoPlay loop />-->
+          </a-assets>
+
+          <a-sphere id="mouth"
+              color="#000"
+              audioanalyser
+              spotify
+              audioanalyser-volume-scale="multiplier: .008"
+              position="0 1 -4"
+              side="double"
+              shader="flat">
+          </a-sphere>
+          
+          <a-entity id="text" text="value: Say out loud 'play <artist name or song>'; color: #FFF; width: 3" position="0.3 3 -3" remove-on-event="el: #analyser; event: spotify-play">
+          </a-entity>
+
+          <a-gradient-sky material="shader: gradient; topColor: 191 96 255; bottomColor: 66 0 50;"></a-gradient-sky>
+
+          <a-ocean 
+              width="100" 
+              depth="100" 
+              density="50"
+              amplitude="0.1"
+              multiplier="0.5"
+              color="#4286f4" 
+              audioanalyser
+              spotify
+              audioanalyser-volume-scale="multiplier: 100">
+          </a-ocean>
+
+          <a-camera wasd-controls-enabled="false">
+            </a-camera>
+      </a-scene>
+    </div>
+    <!-- END CODE -->
   </body>
 
   <footer>
