@@ -98,7 +98,8 @@
             </a-entity>
             <a-entity id="blueFishA" obj-model="obj: #blue_fish; mtl: #blue_fish-mtl" position="-1 1 -1" scale="0.2 0.2 0.2">
                 <a-animation attribute="position" from="-2 0 -3" to="2 0 -3" repeat="indefinite" direction="alternate"
-                  easing="ease"></a-animation>
+                  easing="linear" dur="2000"></a-animation>
+                <a-animation attribute="rotation" dur="10000" fill="forwards" to="0 360 0" repeat="indefinite"></a-animation>
             </a-entity>
             
             <a-sky id="sky" sky="analyserEl: #ocean; el: #sky" color="#f441b2"></a-sky>
