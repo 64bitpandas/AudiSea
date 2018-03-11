@@ -129,12 +129,14 @@
 
       <a-sky id="sky" sky="analyserEl: #ocean; el: #sky" color="#f441b2"></a-sky>
 
-      <a-ocean id="ocean" width="100" depth="100" density="50" amplitude="0.1" multiplier="0.5" color="#4286f4" audioanalyser="src: #song"
+      <a-ocean id="ocean" width="130" depth="130" density="70" amplitude="0.1" multiplier="0.5" color="#4286f4" audioanalyser="src: #song"
         audioanalyser-volume-scale="multiplier: 100">
       </a-ocean>
 
-      <a-camera wasd-controls-enabled="false" user-height="4" id="camera" universal-controls="movementEnabled: false">
-      </a-camera>
+      <a-entity position="0 1.35 0">
+        <a-camera wasd-controls-enabled="false" id="camera" universal-controls="movementEnabled: false">
+        </a-camera>
+      </a-entity>
     </a-scene>
   </div>
   <!-- END CODE -->
