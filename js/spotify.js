@@ -5,8 +5,7 @@ Spotify.getToken().then(function (response) {
 
 AFRAME.registerComponent('spotify', {
   init: function () {
-    var audioEl;
-    var el = this.el;
+    
     console.log("Spotify Module Initialized");
 
     // Set up speech recognition.
@@ -15,6 +14,14 @@ AFRAME.registerComponent('spotify', {
     });
     annyang.start();
 
+    
+  },
+
+  searchTrack: function (query) {
+    if (query === undefined || query === null)
+     return;
+    var audioEl;
+    var el = this.el;
     // Create audio element to point to Spotify preview URL.
     audioEl = this.audioEl = document.createElement('audio');
     audioEl.id = "song"
@@ -22,10 +29,7 @@ AFRAME.registerComponent('spotify', {
     audioEl.loop = true;
     audioEl.id = 'spotifyTrack';
     el.appendChild(audioEl);
-    el.setAttribute('audioanalyser', {src: '#spotifyTrack'});
-  },
-
-  searchTrack: function (query) {
+    el.setAttribute('audioanalyser', { src: '#spotifyTrack' });
     var audioEl = this.audioEl;
     var el = this.el;
     console.log("Query: " + query);
