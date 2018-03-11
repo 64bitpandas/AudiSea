@@ -109,6 +109,11 @@ AFRAME.registerComponent('ocean', {
 
     volume = analyserComponent.volume * this.data.multiplier;
 
+    //ambient movement on the water
+    if (volume === 0) {
+      volume = 1
+    }
+
     const verts = this.mesh.geometry.vertices;
     for (let v, vprops, i = 0; (v = verts[i]); i++){
       vprops = this.waves[i];
