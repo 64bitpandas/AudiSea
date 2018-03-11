@@ -48,11 +48,8 @@ AFRAME.registerComponent('spotify', {
         else {
           console.log("Track: " + i.toString() + " Not Found! Trying next track.");
         }
-        
       }
       
     });
   }
-
-
 });
