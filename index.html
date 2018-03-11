@@ -62,7 +62,7 @@
         </div>
         </div>
         </div>
-        <a-scene id="scene" antialias="true" embedded>
+        <a-scene id="scene" antialias="true" embedded voice-select>
             <div class="a-enter-vr"></div>
             <a-assets>
 
@@ -81,11 +81,11 @@
                 <a-asset-item id="blue_fish-mtl" src="./OBJ Models/blue_fish.mtl"></a-asset-item>
             </a-assets>
             
-      <!--
 
-              <a-entity id="text" text="value: Say out loud 'play <artist name or song>'; color: #FFF; width: 3" position="0.3 3 -3" remove-on-event="el: #analyser; event: spotify-play">
-              </a-entity>
-            -->
+
+      <!-- <a-entity id="text" text="value: Say out loud 'play <song>'; color: #FFF; width: 5" position="0.3 3 -3" remove-on-event="el: #analyser; event: spotify-play">
+      </a-entity> -->
+    
 
       <a-entity id="boatA" obj-model="obj: #boat; mtl: #boat-mtl" position="-1 0 -1" scale="0.2 0.2 0.2">
         <a-animation id="boatAAnimation" attribute="position" from="-2 0.1 -3" to="-2 0.25 -3" repeat="indefinite" direction="alternate"
@@ -142,7 +142,9 @@
   </div>
   <script src="./js/audio-volume-scale.js"></script>
   <script src="./js/color-on-beat.js"></script>
+  <!-- <script src="./js/annyang.min.js"></script> -->
   <script src="./js/song-select.js"></script>
+  <!-- <script src="./js/voice-select.js"></script> -->
   <script src="./js/sky.js"></script>
 </footer>
 
