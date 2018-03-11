@@ -30,6 +30,9 @@ AFRAME.registerComponent('sky', {
         //sky
         var skyEl = this.data.el;
 
+        var boatA = document.getElementById("boatA");
+
+
         analyserComponent = analyserEl.components.audioanalyser;
         if (!analyserComponent.analyser) { return; }
 
@@ -44,6 +47,7 @@ AFRAME.registerComponent('sky', {
         for(var cloud of clouds)
             cloud.setAttribute('position', (cloud.getAttribute('position').x + (avg/10000)) + ' ' + cloud.getAttribute('position').y + ' ' + cloud.getAttribute('position').z);
 
+        boatA.setAttribute("position", "-1 " + ((avg / 50)-1) + " -2");
         skyEl.components.material.material = new THREE.MeshBasicMaterial();
        
         // shift sky colors
