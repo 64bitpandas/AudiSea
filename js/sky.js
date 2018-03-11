@@ -34,6 +34,7 @@ AFRAME.registerComponent('sky', {
         var skyEl = this.data.el;
 
         var boatA = document.getElementById("boatA");
+        var camera = document.getElementById("camera");
 
 
         analyserComponent = analyserEl.components.audioanalyser;
@@ -53,7 +54,8 @@ AFRAME.registerComponent('sky', {
             cloud.setAttribute('scale', scale + ' ' + scale + ' ' + scale);
         }
 
-        boatA.setAttribute("position", "-1 " + ((avg / 50)-1) + " -2");
+        boatA.setAttribute("position", "0 " + ((avg / 50)+0.5) + " 0");
+        camera.setAttribute("user-height", ((avg / 50)+2));
         skyEl.components.material.material = new THREE.MeshBasicMaterial();
        
         // shift sky colors

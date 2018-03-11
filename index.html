@@ -87,9 +87,9 @@
       </a-entity> -->
     
 
-      <a-entity id="boatA" obj-model="obj: #boat; mtl: #boat-mtl" position="-1 0 -1" scale="0.2 0.2 0.2">
-        <a-animation id="boatAAnimation" attribute="position" from="-2 0.1 -3" to="-2 0.25 -3" repeat="indefinite" direction="alternate"
-          easing="ease">
+      <a-entity id="boatA" obj-model="obj: #boat; mtl: #boat-mtl" position="-4 0 0" scale="1 1 1" rotation="0 90 0">
+        <!-- <a-animation id="boatAAnimation" attribute="position" from="-2 0.1 -3" to="-2 0.25 -3" repeat="indefinite" direction="alternate"
+          easing="ease"> -->
         </a-animation>
 
       <!-- blueFishA Elements -->
@@ -109,7 +109,7 @@
         audioanalyser-volume-scale="multiplier: 100">
       </a-ocean>
 
-      <a-camera wasd-controls-enabled="false" user-height="2">
+      <a-camera wasd-controls-enabled="false" user-height="3" id="camera">
       </a-camera>
     </a-scene>
   </div>
