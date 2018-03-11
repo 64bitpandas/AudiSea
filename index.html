@@ -9,8 +9,7 @@
     <script src="./js/gradientsky.min.js"></script>
     <script src="./js/ocean.js"></script>
     <script src="./js/aframe-audioanalyser-components.min.js"></script>
-    <script src="./js/audio-volume-scale.js"></script>
-    <script src="./js/color-on-beat.js"></script>
+
 
     <script src="js/annyang.min.js"></script>
     <script src="js/spotify-web-api.js"></script>
@@ -29,10 +28,10 @@
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
-    <div id="root">
 
       <!-- START CODE -->
       <a-scene antialias="true">
+          <div class="a-enter-vr"></div>
           <a-assets>
               <!--<audio id="song" src="./wingless.mp3" autoPlay loop />-->
           </a-assets>
@@ -50,12 +49,12 @@
           <a-entity id="text" text="value: Say out loud 'play <artist name or song>'; color: #FFF; width: 3" position="0.3 3 -3" remove-on-event="el: #analyser; event: spotify-play">
           </a-entity>
 
-          <a-gradient-sky material="shader: gradient; topColor: 191 96 255; bottomColor: 66 134 244;"></a-gradient-sky>
+          <a-gradient-sky material="shader: gradient; topColor: 191 96 255; bottomColor: 66 0 50;"></a-gradient-sky>
 
           <a-ocean 
               width="100" 
               depth="100" 
-              density="90"
+              density="50"
               amplitude="0.1"
               multiplier="0.5"
               color="#4286f4" 
@@ -64,12 +63,12 @@
               audioanalyser-volume-scale="multiplier: 100">
           </a-ocean>
 
-          <a-camera wasd-controls-enabled="false" position="0 0 0">
-              <a-cursor color="#05ffa1"></a-cursor>
-          </a-camera>
       </a-scene>
       <!-- END CODE -->
-
-    </div>
   </body>
+
+  <footer>
+        <script src="./js/audio-volume-scale.js"></script>
+        <script src="./js/color-on-beat.js"></script>
+  </footer>
 </html>
