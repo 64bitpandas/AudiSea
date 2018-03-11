@@ -17,6 +17,7 @@ AFRAME.registerComponent('spotify', {
 
     // Create audio element to point to Spotify preview URL.
     audioEl = this.audioEl = document.createElement('audio');
+    audioEl.id = "song"
     audioEl.crossOrigin = 'anonymous';
     audioEl.loop = true;
     audioEl.id = 'spotifyTrack';

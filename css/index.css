@@ -1,3 +1,9 @@
 * {
     font-family: 'Nanum Gothic', sans-serif;
 }
+
+a-scene {
+    height: 600px;
+    margin: auto;
+    width: 90%;
+  }
