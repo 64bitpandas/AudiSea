@@ -53,8 +53,7 @@ AFRAME.registerComponent('sky', {
             var scale = 1 + volume/1000;
             cloud.setAttribute('scale', scale + ' ' + scale + ' ' + scale);
         }
-
-        boatA.setAttribute("position", "0 " + ((avg / 50)+0.5) + " 0");
+        boatA.setAttribute("position", "0 " + ((avg / 40)+0.5) + " 0");
         camera.setAttribute("user-height", ((avg / 50)+2));
         skyEl.components.material.material = new THREE.MeshBasicMaterial();
        
