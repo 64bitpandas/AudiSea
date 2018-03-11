@@ -2,12 +2,6 @@ import React, { Component } from "react"
 import mp3 from './wingless.mp3';
 
 class Index extends Component {
-
-    constructor() {
-        super();
-        this.state = {amplitude: 0.4};
-    }
-
     render() {
         return(
             <div className="Index">
