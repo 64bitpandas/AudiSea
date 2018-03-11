@@ -56,15 +56,6 @@
                 <a-asset-item id="boat" src="./OBJ Models/boatboat.obj"></a-asset-item>
                 <a-asset-item id="boat-mtl" src="./OBJ Models/boatboat.mtl"></a-asset-item>
             </a-assets>
-
-            <a-sphere id="mouth"
-                color="#000"
-                audioanalyser="src: #song"
-                audioanalyser-volume-scale="multiplier: .008"
-                position="0 1 -4"
-                side="double"
-                shader="flat"
-            ></a-sphere>
             
             <!--
               <a-entity id="text" text="value: Say out loud 'play <artist name or song>'; color: #FFF; width: 3" position="0.3 3 -3" remove-on-event="el: #analyser; event: spotify-play">
@@ -95,8 +86,8 @@
               audioanalyser-volume-scale="multiplier: 100">
           </a-ocean>
 
-            <a-camera wasd-controls-enabled="false">
-              </a-camera>
+            <a-camera wasd-controls-enabled="false" user-height="2">
+            </a-camera>
         </a-scene>
       </div>
       <!-- END CODE -->
