@@ -10,7 +10,19 @@ a-scene {
     height: 600px;
     margin: auto;
     width: 90%;
-  }
+}
+
+.hover-change {
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+}
+
+.hover-change:hover {
+    color: #05ffa1 !important;
+}
 
 .c {
     padding-bottom: 3rem;

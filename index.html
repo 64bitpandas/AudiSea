@@ -38,29 +38,38 @@
 
   <!-- START CODE -->
   <div class="c">
-    <h1 class="center-align">Welcome to AudiSea!</h1>
+    <h1 class="center-align hover-change white-text">Welcome to AudiSea!</h1>
 
 
 
-    <div class="container">
-      <div class="card lighten-3 white-text" style="background-color: rgb(255, 60, 136);">
-        <div class="card-content">
-          <h3 class="center-align black-text">Select a Song</h3>
-        </div>
-        <div class="card-action">
-          <div class="row">
-            <div class="col s4 center-align">
-              <a value="only-you" class="song-select waves-effect waves-light btn blue">Only You</a>
+      <div class="container">
+        <div class="card pink darken-1 white-text">
+          <div class="card-content">
+            <h3 class="center-align white-text hover-change">Select a Song</h3>
+          </div>
+          <div class="card-action">
+            <div class="row">
+              <div class="col s4 center-align">
+                <a value="yazoo" class="song-select waves-effect waves-light btn blue hover-change">Yazoo</a>
+              </div>
+              <div class="col s4 center-align">
+                <a value="stravinsky" class="song-select waves-effect waves-light btn blue hover-change">Stravinsky</a>
+              </div>
+              <div class="col s4 center-align">
+                <a value="the-beatles" class="song-select waves-effect waves-light btn blue hover-change">The Beatles</a>
+              </div>
             </div>
-            <div class="col s4 center-align">
-              <a value="stravinsky" class="song-select waves-effect waves-light btn orange">Stravinsky</a>
-            </div>
-            <div class="col s4 center-align">
-              <a value="let-em-in" class="song-select waves-effect waves-light btn green">Let 'Em In</a>
+            <div class="row">
+              <div class="col s3 center-align">
+              </div>
+              <div class="col s6 center-align">
+                  <a value="paul-anka" class="song-select waves-effect waves-light btn blue hover-change">Paul Anka</a>
+              </div>
+              <div class="col s3 center-align">
+              </div>
             </div>
           </div>
-        </div>
-        </div>
+          </div>
         </div>
         <a-scene id="scene" antialias="true" embedded voice-select>
             <div class="a-enter-vr"></div>
@@ -89,8 +98,8 @@
 
       <a-entity id="boatA" obj-model="obj: #boat; mtl: #boat-mtl" position="-4 0 0" scale="1 1 1" rotation="0 90 0">
         <!-- <a-animation id="boatAAnimation" attribute="position" from="-2 0.1 -3" to="-2 0.25 -3" repeat="indefinite" direction="alternate"
-          easing="ease"> -->
-        </a-animation>
+          easing="ease"> 
+        </a-animation>-->
 
       <!-- blueFishA Elements -->
       </a-entity>
@@ -116,40 +125,40 @@
   <!-- END CODE -->
 </body>
 
-<footer class="page-footer amber darken-3">
-  <div class="container">
-    <div class="row">
-      <div class="col l4 offset-l2 s12">
-        <h4 class="white-text">Links and Sources</h4>
-        <ul>
-          <li>
-            <a class="white-text text-lighten-3" href="https://github.com/dbqeo/AudiSea">GitHub Source</a>
-          </li>
-          <li>
-            <a class="white-text text-lighten-3" href="https://aframe.io">AFrame</a>
-          </li>
-          <li>
-            <a class="white-text text-lighten-3" href="https://github.com/ngokevin/kframe">KFrame</a>
-          </li>
-          <li>
-            <a class="white-text text-lighten-3" href="http://materializecss.com">Materialize</a>
-          </li>
-        </ul>
+<footer class="page-footer pink darken-1">
+    <div class="container">
+      <div class="row">
+        <div class="col l4 offset-l2 s12">
+          <h4 class="white-text hover-change">Links and Sources</h4>
+          <ul>
+            <li>
+              <a class="white-text text-lighten-3 hover-change" href="https://github.com/dbqeo/AudiSee">GitHub Source</a>
+            </li>
+            <li>
+              <a class="white-text text-lighten-3 hover-change" href="https://aframe.io">AFrame</a>
+            </li>
+            <li>
+              <a class="white-text text-lighten-3 hover-change" href="https://github.com/ngokevin/kframe">KFrame</a>
+            </li>
+            <li>
+              <a class="white-text text-lighten-3 hover-change" href="http://materializecss.com/footer.html">Materialize</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="footer-copyright">
-    <div class="container">
-      © 2018 Bananium Labs
-      <a class="white-text text-lighten-4 right" href="https://github.com/dbqeo/AudiSea/LICENSE">MIT License</a>
+    <div class="footer-copyright">
+      <div class="container hover-change">
+        © 2018 Bananium Labs
+        <a class="white-text text-lighten-4 right hover-change" href="https://github.com/dbqeo/AudiSea/LICENSE">MIT License</a>
+      </div>
     </div>
-  </div>
-  <script src="./js/audio-volume-scale.js"></script>
-  <script src="./js/color-on-beat.js"></script>
-  <!-- <script src="./js/annyang.min.js"></script> -->
-  <script src="./js/song-select.js"></script>
-  <!-- <script src="./js/voice-select.js"></script> -->
-  <script src="./js/sky.js"></script>
-</footer>
-
-</html>
+    <script src="./js/audio-volume-scale.js"></script>
+    <script src="./js/color-on-beat.js"></script>
+    <!-- <script src="./js/annyang.min.js"></script> -->
+    <script src="./js/song-select.js"></script>
+    <!-- <script src="./js/voice-select.js"></script> -->
+    <script src="./js/sky.js"></script>
+  </footer>
+  
+  </html>
