@@ -26,12 +26,19 @@ AFRAME.registerComponent('spotify', {
   searchTrack: function (query) {
     var audioEl = this.audioEl;
     var el = this.el;
+    console.log("Query: " + query);
     Spotify.searchTracks(query).then(function (results) {
       var track = results.tracks.items[0];
-      var previewUrl = track.preview_url;
-      el.emit('spotify-play', results);
-      audioEl.src = track.preview_url;
-      audioEl.play();
+      if (typeof track !== 'undefined') {
+        var previewUrl = track.preview_url;
+        console.log(track.preview_url);
+        el.emit('spotify-play', results);
+        audioEl.src = track.preview_url;
+        audioEl.play();
+      }
+      else  {
+        console.log("Track Not Found!");
+      }
     });
   }
 });
