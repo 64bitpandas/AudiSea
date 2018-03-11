@@ -7,6 +7,7 @@ AFRAME.registerComponent('spotify', {
   init: function () {
     var audioEl;
     var el = this.el;
+    console.log("Spotify Module Initialized");
 
     // Set up speech recognition.
     annyang.addCommands({
