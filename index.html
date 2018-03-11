@@ -14,7 +14,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
   <!-- A-Frame Scripts -->
-  <script src="./js/aframe.min.js"></script>
+  <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
   <script src="./js/gradientsky.min.js"></script>
   <script src="./js/ocean.js"></script>
 
@@ -120,7 +120,7 @@
         audioanalyser-volume-scale="multiplier: 100">
       </a-ocean>
 
-      <a-camera wasd-controls-enabled="false" user-height="4" id="camera">
+      <a-camera wasd-controls-enabled="false" user-height="4" id="camera" universal-controls="movementEnabled: false">
       </a-camera>
     </a-scene>
   </div>
