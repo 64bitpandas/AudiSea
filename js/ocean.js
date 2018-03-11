@@ -69,7 +69,12 @@ AFRAME.registerPrimitive('a-ocean', {
         var obj = document.createAttribute("obj-model");
         obj.value = "obj: #dolphin; mtl: #dolphin-mtl;";
         var alongpath = document.createAttribute("alongpath");
-        alongpath.value = "curve: #track1; dur:4000; rotate:true;";
+        if (Math.floor(Math.random() * (2 - 0)) + 0 == 0)
+         alongpath.value = "curve: #track1; dur:4000; rotate:true;";
+        if (Math.floor(Math.random() * (2 - 0)) + 0 == 1)
+          alongpath.value = "curve: #track2; dur:4000; rotate:true;";
+        if (Math.floor(Math.random() * (2 - 0)) + 0 == 2)
+          alongpath.value = "curve: #track3; dur:4000; rotate:true;";
         var scale = document.createAttribute("scale");
         scale.value = "1.5 1.5 1.5";
         dolphin.setAttributeNode(obj);
