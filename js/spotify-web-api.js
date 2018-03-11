@@ -3,7 +3,7 @@ var SpotifyWebApi = (function() {
   'use strict';
   var _baseUri = 'https://api.spotify.com/v1';
   var _baseTokenUri = 'https://spotify-web-api-token.herokuapp.com';
-  var _accessToken = null;
+  var _accessToken = undefined;
 
   var _promiseProvider = function(promiseFunction) {
     return new window.Promise(promiseFunction);
@@ -27,6 +27,7 @@ var SpotifyWebApi = (function() {
     var promiseFunction = function(resolve, reject) {
       var req = new XMLHttpRequest();
       var type = requestData.type || 'GET';
+      console.log(requestData.url);
       if (type === 'GET') {
         req.open(type,
           _buildUrl(requestData.url, requestData.params),
@@ -101,6 +102,7 @@ var SpotifyWebApi = (function() {
     if (qs.length > 0){
       qs = qs.substring(0, qs.length - 1); //chop off last '&'
       url = url + '?' + qs;
+      url = url + "&market=US";
     }
     return url;
   };
