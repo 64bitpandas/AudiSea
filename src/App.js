@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { Route } from "react-router-dom"
 import Index from "./views/Index"
-
+require('aframe-extras');
 class App extends Component {
   render() {
     return (
