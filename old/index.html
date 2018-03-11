@@ -11,8 +11,12 @@
     <script src="./js/aframe.min.js"></script>
     <script src="./js/gradientsky.min.js"></script>
     <script src="./js/ocean.js"></script>
-
     <script src="./js/aframe-audioanalyser-components.min.js"></script>
+
+    <script src="js/annyang.min.js"></script>
+    <script src="js/spotify-web-api.js"></script>
+    <script src="js/spotify.js"></script>
+    <script src="js/remove-on-event.js"></script>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet"/>
@@ -35,17 +39,16 @@
         <div>
           <h1>Welcome to AudiSea</h1>
         </div>
-        <a-scene id="scene" antialias="true" embedded>
+        <a-scene antialias="true" embedded>
             <div class="a-enter-vr"></div>
             <a-assets>
-                <audio id="song" src="./wingless.mp3" autoPlay loop />
-                <a-asset-item id="cloud" src="./OBJ Models/Cloud_1.obj"></a-asset-item>
-                <a-asset-item id="cloud-mtl" src="./OBJ Models/Cloud_1.mtl"></a-asset-item>
+                <!--<audio id="song" src="./wingless.mp3" autoPlay loop />-->
             </a-assets>
 
             <a-sphere id="mouth"
                 color="#000"
-                audioanalyser="src: #song"
+                audioanalyser
+                spotify
                 audioanalyser-volume-scale="multiplier: .008"
                 position="0 1 -4"
                 side="double"
@@ -55,20 +58,20 @@
             <a-entity id="text" text="value: Say out loud 'play <artist name or song>'; color: #FFF; width: 3" position="0.3 3 -3" remove-on-event="el: #analyser; event: spotify-play">
             </a-entity>
 
-                                                                                                    
+            <a-gradient-sky material="shader: gradient; topColor: 191 96 255; bottomColor: 66 0 50;"></a-gradient-sky>
 
-            <a-gradient-sky id="sky" sky="analyserEl: #ocean; el: #sky" material="shader: gradient; topColor: 191 96 255; bottomColor: 66 0 50;"></a-gradient-sky>
-
-          <a-ocean id="ocean"
+          <a-ocean 
               width="100" 
               depth="100" 
               density="50"
               amplitude="0.1"
               multiplier="0.5"
               color="#4286f4" 
+              skyEl="#"
               audioanalyser="src: #song"
               audioanalyser-volume-scale="multiplier: 100">
           </a-ocean>
+        
 
             <a-camera wasd-controls-enabled="false">
               </a-camera>
@@ -80,6 +83,5 @@
   <footer>
         <script src="./js/audio-volume-scale.js"></script>
         <script src="./js/color-on-beat.js"></script>
-            <script src="./js/sky.js"></script>
   </footer>
 </html>
