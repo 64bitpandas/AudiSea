@@ -46,6 +46,13 @@ AFRAME.registerComponent('sky', {
 
         skyEl.components.material.material = new THREE.MeshBasicMaterial();
        
+        // shift sky colors
+        function round(value, decimals) {
+            return Number(Math.round(value+'e'+decimals)+'e-'+decimals);
+        }
+        
+        $("#sky").attr("color", "rgb(" + round(avg, 0)*4 + ", " + round((avg + 1), 0)*7 + "," + round((avg + 2)*10, 0) + ")")
+
     }
 
 });

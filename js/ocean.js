@@ -102,6 +102,7 @@ AFRAME.registerComponent('ocean', {
     var volume;
 
     //sky
+
     var skyEl = this.data.sky;
 
     analyserComponent = analyserEl.components.audioanalyser;

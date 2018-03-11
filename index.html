@@ -34,11 +34,16 @@
       <div class="c">
         <div>
           <h1>Welcome to AudiSea</h1>
+          <button value="relax" class="song-select">Relaxation</button>
+            <br>
+            <button value="hype" class="song-select">Hype</button>
+            <br>
+            <button value="indie" class="song-select">Indie</button>
         </div>
         <a-scene id="scene" antialias="true" embedded>
             <div class="a-enter-vr"></div>
             <a-assets>
-                <audio id="song" src="./wingless.mp3" autoPlay loop />
+                <audio id="song" autoPlay loop />
                 <a-asset-item id="cloud1" src="./OBJ Models/Cloud_1.obj"></a-asset-item>
                 <a-asset-item id="cloud1-mtl" src="./OBJ Models/Cloud_1.mtl"></a-asset-item>
                 <a-asset-item id="cloud2" src="./OBJ Models/Cloud_2.obj"></a-asset-item>
@@ -58,12 +63,16 @@
                 shader="flat"
             ></a-sphere>
             
-            <a-entity id="text" text="value: Say out loud 'play <artist name or song>'; color: #FFF; width: 3" position="0.3 3 -3" remove-on-event="el: #analyser; event: spotify-play">
-            </a-entity>
+            <!--
+              <a-entity id="text" text="value: Say out loud 'play <artist name or song>'; color: #FFF; width: 3" position="0.3 3 -3" remove-on-event="el: #analyser; event: spotify-play">
+              </a-entity>
+            -->
 
-                                                                                                    
+            <a-sky id="sky" color="#f441b2"></a-sky>
 
-            <a-gradient-sky id="sky" sky="analyserEl: #ocean; el: #sky" material="shader: gradient; topColor: 191 96 255; bottomColor: 66 0 50;"></a-gradient-sky>
+            <!--
+              <a-gradient-sky id="sky" sky="analyserEl: #ocean; el: #sky" material="shader: gradient; topColor: 191 96 255; bottomColor: 66 0 50;"></a-gradient-sky>
+            -->
 
           <a-ocean id="ocean"
               width="100" 
@@ -86,6 +95,7 @@
   <footer>
         <script src="./js/audio-volume-scale.js"></script>
         <script src="./js/color-on-beat.js"></script>
-            <script src="./js/sky.js"></script>
+        <script src="./js/song-select.js"></script>
+        <script src="./js/sky.js"></script>
   </footer>
 </html>
