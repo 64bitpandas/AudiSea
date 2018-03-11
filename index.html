@@ -2,8 +2,9 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,user-scalable=no,maximum-scale=1">
 
   <!-- JQuery -->
   <script src="./js/jquery.js"></script>
@@ -13,7 +14,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
   <!-- A-Frame Scripts -->
-  <script src="./js/aframe.min.js"></script>
+  <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
   <script src="./js/gradientsky.min.js"></script>
   <script src="./js/ocean.js"></script>
 
@@ -132,7 +133,7 @@
         audioanalyser-volume-scale="multiplier: 100">
       </a-ocean>
 
-      <a-camera wasd-controls-enabled="false" user-height="3" id="camera">
+      <a-camera wasd-controls-enabled="false" user-height="4" id="camera" universal-controls="movementEnabled: false">
       </a-camera>
     </a-scene>
   </div>
