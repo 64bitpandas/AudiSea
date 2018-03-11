@@ -102,6 +102,7 @@ AFRAME.registerComponent('ocean', {
     var volume;
     var boatA = document.getElementById("boatAAnimation");
     //sky
+
     var skyEl = this.data.sky;
     var tickerC = 0;
 
