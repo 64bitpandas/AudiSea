@@ -118,14 +118,14 @@
       </a-entity>
 
       <a-curve id="track1">
-        <a-curve-point position="-5 -1 -8" geometry="primitive:box; height:0.1; width:0.1; depth:0.1" material="color:#ff0000"></a-curve-point>
-        <a-curve-point position="0 5 -8" geometry="primitive:box; height:0.1; width:0.1; depth:0.1" material="color:#ff0000"></a-curve-point>
-        <a-curve-point position="5 -1 -8" geometry="primitive:box; height:0.1; width:0.1; depth:0.1" material="color:#ff0000"></a-curve-point>
+        <a-curve-point position="-5 -2 -8"></a-curve-point>
+        <a-curve-point position="0 5 -8"></a-curve-point>
+        <a-curve-point position="5 -2 -8"></a-curve-point>
       </a-curve>
 
-      <a-entity id="dolphin"  alongpath="curve: #track1; dur:3000; loop: true; rotate:true;" obj-model="obj: #dolphin; mtl: #dolphin-mtl" color="#ffffff" scale="3 3 3">
+      <!-- <a-entity id="dolphin"  alongpath="curve: #track1; dur:4000; loop: true; rotate:true;" obj-model="obj: #dolphin; mtl: #dolphin-mtl" scale="1.5 1.5 1.5" rotation="0 0 180">
 
-      </a-entity>
+      </a-entity> -->
 
       <a-sky id="sky" sky="analyserEl: #ocean; el: #sky" color="#f441b2"></a-sky>
 

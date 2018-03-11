@@ -60,7 +60,24 @@ AFRAME.registerPrimitive('a-ocean', {
       const el = this.el,
           data = this.data;
       let material = el.components.material;
-  
+      
+     
+
+      //Dolphin
+      this.el.addEventListener('audioanalyser-beat', function () {
+        var dolphin = document.createElement('a-entity');
+        var obj = document.createAttribute("obj-model");
+        obj.value = "obj: #dolphin; mtl: #dolphin-mtl;";
+        var alongpath = document.createAttribute("alongpath");
+        alongpath.value = "curve: #track1; dur:4000; rotate:true;";
+        var scale = document.createAttribute("scale");
+        scale.value = "1.5 1.5 1.5";
+        dolphin.setAttributeNode(obj);
+        dolphin.setAttributeNode(alongpath);
+        dolphin.setAttributeNode(scale);
+        document.getElementById('scene').appendChild(dolphin);
+      });
+
       const geometry = new THREE.PlaneGeometry(data.width, data.depth, data.density, data.density);
       geometry.mergeVertices();
       this.waves = [];
