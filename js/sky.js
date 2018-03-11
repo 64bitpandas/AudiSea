@@ -1,6 +1,6 @@
 var rollingAvg = new Array(100).fill(0);
-for(var x = -15; x < 5; x++)
-    for(var z = -5; z < 5; z++) {
+for(var x = -5; x < 5; x++)
+    for(var z = -15; z < 5; z++) {
         var cloud = document.createElement("a-entity");
         cloud.className = "cloud";
         var obj = document.createAttribute("obj-model");
@@ -49,7 +49,7 @@ AFRAME.registerComponent('sky', {
         // console.log(avg);
         var clouds = document.getElementsByClassName("cloud");
         for(var cloud of clouds) {
-            cloud.setAttribute('position', (cloud.getAttribute('position').x + ((avg-0.1)/8000)) + ' ' + cloud.getAttribute('position').y + ' ' + cloud.getAttribute('position').z);
+            cloud.setAttribute('position', cloud.getAttribute('position').x + ' ' + cloud.getAttribute('position').y + ' ' + (cloud.getAttribute('position').z + ((avg - 0.1) / 8000)) );
             var scale = 1 + volume/1000;
             cloud.setAttribute('scale', scale + ' ' + scale + ' ' + scale);
         }
