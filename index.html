@@ -20,7 +20,7 @@
   <script src="./js/aframe-audioanalyser-components.min.js"></script>
 
   <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
 
   <!-- Stylesheet -->
   <link href="./css/index.css" rel="stylesheet" />
@@ -43,7 +43,7 @@
 
 
     <div class="container">
-      <div class="card light-blue lighten-3 white-text">
+      <div class="card lighten-3 white-text" style="background-color: rgb(255, 60, 136);">
         <div class="card-content">
           <h3 class="center-align black-text">Select a Song</h3>
         </div>
@@ -53,10 +53,10 @@
               <a value="only-you" class="song-select waves-effect waves-light btn blue">Only You</a>
             </div>
             <div class="col s4 center-align">
-              <a value="hype" class="song-select waves-effect waves-light btn orange">Hype</a>
+              <a value="stravinsky" class="song-select waves-effect waves-light btn orange">Stravinsky</a>
             </div>
             <div class="col s4 center-align">
-              <a value="indie" class="song-select waves-effect waves-light btn green">Indie</a>
+              <a value="let-em-in" class="song-select waves-effect waves-light btn green">Let 'Em In</a>
             </div>
           </div>
         </div>
@@ -92,12 +92,16 @@
           easing="ease">
         </a-animation>
 
+      <!-- blueFishA Elements -->
       </a-entity>
-            <a-entity id="blueFishA" obj-model="obj: #blue_fish; mtl: #blue_fish-mtl" position="-1 1 -1" scale="0.2 0.2 0.2">
-                <a-animation attribute="position" from="-2 0 -3" to="2 0 -3" repeat="indefinite" direction="alternate"
-                  easing="linear" dur="2000"></a-animation>
-                <a-animation attribute="rotation" dur="10000" fill="forwards" to="0 360 0" repeat="indefinite"></a-animation>
-            </a-entity>
+
+        <a-entity id="blueFishA" obj-model="obj: #blue_fish; mtl: #blue_fish-mtl" position="-1 1 -1" scale="0.2 0.2 0.2">
+
+        <a-animation attribute="position" from="-2 0 -3" to="2 0 -3" repeat="indefinite" direction="alternate" easing="linear" dur="2000"></a-animation>
+
+        <a-animation attribute="rotation" dur="10000" fill="forwards" to="0 360 0" repeat="indefinite"></a-animation>
+
+      </a-entity>
 
       <a-sky id="sky" sky="analyserEl: #ocean; el: #sky" color="#f441b2"></a-sky>
 
