@@ -30,16 +30,16 @@ AFRAME.registerComponent('spotify', {
     console.log("Query: " + query);
     Spotify.searchTracks(query).then(function (results) {
       var track = results.tracks.items[0];
-      if (typeof track !== 'undefined' || typeof track !== 'null') {
+      if (typeof track !== 'undefined' && typeof track !== 'null') {
         var previewUrl = track.preview_url;
         console.log(track.preview_url);
-        window.alert("Song Not Found");
         el.emit('spotify-play', results);
         audioEl.src = track.preview_url;
         audioEl.play();
       }
       else  {
         console.log("Track Not Found!");
+        window.alert("Song Not Found");
       }
     });
   }
