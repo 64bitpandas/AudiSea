@@ -62,8 +62,10 @@ AFRAME.registerComponent('sky', {
         function round(value, decimals) {
             return Number(Math.round(value+'e'+decimals)+'e-'+decimals);
         }
+
+        //console.log(round(avg*3.5, 0))
         
-        $("#sky").attr("color", "rgb(" + round(avg*2.3, 0) + ", 60, 136)")
+        $("#sky").attr("color", "rgb(" + round(avg*3.5, 0) + ", 60, 136)")
 
     }
 
