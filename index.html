@@ -33,7 +33,7 @@
       <a-scene antialias="true">
           <div class="a-enter-vr"></div>
           <a-assets>
-              <!--<audio id="song" src="./wingless.mp3" autoPlay loop />-->
+              <audio id="song" src="./samsara.mp3" autoPlay loop />
           </a-assets>
 
           <a-sphere id="mouth"
@@ -58,8 +58,8 @@
               amplitude="0.1"
               multiplier="0.5"
               color="#4286f4" 
-              audioanalyser
-              spotify
+              skyEl="#"
+              audioanalyser="src: #song"
               audioanalyser-volume-scale="multiplier: 100">
           </a-ocean>
 
