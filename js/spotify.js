@@ -41,8 +41,8 @@ AFRAME.registerComponent('spotify', {
         if (previewUrl !== undefined && previewUrl !== null) {
           console.log(previewUrl);
           el.emit('spotify-play', results);
-          audioEl.src = previewUrl;
-          audioEl.play();
+          $("#song").attr("src", previewUrl)
+          $("#np").html(results.tracks.items[i].name)
           break;
         }
         else {
