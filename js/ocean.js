@@ -81,6 +81,11 @@ AFRAME.registerPrimitive('a-ocean', {
         dolphin.setAttributeNode(alongpath);
         dolphin.setAttributeNode(scale);
         document.getElementById('scene').appendChild(dolphin);
+
+        //used for removing dolphin after used
+        setTimeout(function() {
+          document.getElementById('scene').removeChild(dolphin)
+        }, 4000)
       });
 
       const geometry = new THREE.PlaneGeometry(data.width, data.depth, data.density, data.density);
