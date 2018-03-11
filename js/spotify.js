@@ -23,13 +23,13 @@ AFRAME.registerComponent('spotify', {
     var audioEl;
     var el = this.el;
     // Create audio element to point to Spotify preview URL.
-    audioEl = this.audioEl = document.createElement('audio');
+    audioEl = this.audioEl = document.getElementById('song');
     audioEl.id = "song"
     audioEl.crossOrigin = 'anonymous';
     audioEl.loop = true;
-    audioEl.id = 'spotifyTrack';
+    //audioEl.id = 'spotifyTrack';
     el.appendChild(audioEl);
-    el.setAttribute('audioanalyser', { src: '#spotifyTrack' });
+    el.setAttribute('audioanalyser', { src: '#song' });
     var audioEl = this.audioEl;
     var el = this.el;
     console.log("Query: " + query);
@@ -41,7 +41,8 @@ AFRAME.registerComponent('spotify', {
         if (previewUrl !== undefined && previewUrl !== null) {
           console.log(previewUrl);
           el.emit('spotify-play', results);
-          $("#song").attr("src", previewUrl);
+          audioEl.src = previewUrl;
+          audioEl.play();
           break;
         }
         else {
