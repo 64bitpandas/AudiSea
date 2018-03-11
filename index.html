@@ -55,6 +55,8 @@
                 <a-asset-item id="cloud4-mtl" src="./OBJ Models/Cloud_4.mtl"></a-asset-item>
                 <a-asset-item id="boat" src="./OBJ Models/boatboat.obj"></a-asset-item>
                 <a-asset-item id="boat-mtl" src="./OBJ Models/boatboat.mtl"></a-asset-item>
+                <a-asset-item id="blue_fish" src="./OBJ Models/blue_fish.obj"></a-asset-item>
+                <a-asset-item id="blue_fish-mtl" src="./OBJ Models/blue_fish.mtl"></a-asset-item>
             </a-assets>
             
             <!--
@@ -67,6 +69,10 @@
             <a-entity id="boatA" obj-model="obj: #boat; mtl: #boat-mtl" position="-1 0 -1" scale="0.2 0.2 0.2">
             <!--<a-animation id="boatAAnimation" attribute="position" from="-2 0.1 -3" to="-2 0.25 -3" repeat="indefinite" direction="linear" easing="ease"></a-animation>-->
               
+            </a-entity>
+            <a-entity id="blueFishA" obj-model="obj: #blue_fish; mtl: #blue_fish-mtl" position="-1 1 -1" scale="0.2 0.2 0.2">
+                <a-animation attribute="position" from="-2 0 -3" to="2 0 -3" repeat="indefinite" direction="alternate"
+                  easing="ease"></a-animation>
             </a-entity>
             
             <a-sky id="sky" sky="analyserEl: #ocean; el: #sky" color="#f441b2"></a-sky>
