@@ -1,5 +1,7 @@
 # AudiSea
-Try AudiSea by going to [dbqeo.github.io/AudiSea](https://dbqeo.github.io/AudiSea/).
+Try AudiSea by going to [bananiumlabs.github.io/AudiSea](https://bananiumlabs.github.io/AudiSea/).
+
+Created by: Ben Cuan, Eric Qian, Alexey Kolechkin, Alex Waitz
 
 # Inspiration
 While we were thinking of ideas, we started listening to music for inspiration, and then we came up with the idea of visualizing music to immerse and enhance the listening experience.
