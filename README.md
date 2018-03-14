@@ -1,6 +1,15 @@
 # AudiSea
-Try AudiSea by going to [dbqeo.github.io/AudiSea](https://dbqeo.github.io/AudiSea/).
 
+Menlo Hacks III Submission, 11 March 2018. Winner - 4th-6th Place!
+
+Try AudiSea by going to [bananiumlabs.github.io/AudiSea](https://bananiumlabs.github.io/AudiSea/).
+
+# Contributors
+ - [Alex Waitz](https://github.com/alexwaitz)
+ - [Alexey Kolechkin](https://github.com/kuxxe)
+ - [Ben Cuan](https://github.com/dbqeo)
+ - [Eric Qian](https://github.com/EnumC)
+ 
 # Inspiration
 While we were thinking of ideas, we started listening to music for inspiration, and then we came up with the idea of visualizing music to immerse and enhance the listening experience.
 
